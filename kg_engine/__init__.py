@@ -1,45 +1,45 @@
 # -*- coding: utf-8 -*-
 """
-Knowledge Graph - 知识图谱技能
+KG Engine - Knowledge Graph Engine
 
-从 MemoryCoreClaw 记忆系统中提取实体和关系，构建可视化的知识图谱
+Knowledge Graph System with entity recognition, relation extraction, graph query and visualization
 
-融合 Ontology 本体论：
-- 类层次结构
-- 属性继承  
-- 关系推理
-- 本体查询
+Integration with Ontology:
+- Class hierarchy
+- Property inheritance
+- Relation inference
+- Ontology query
 
-主要功能：
-- 实体识别和提取
-- 关系提取和构建
-- 本体推理增强
-- 知识图谱查询
-- Mermaid 可视化
-- 文本描述输出
+Core Features:
+- Entity recognition and extraction
+- Relation extraction and construction
+- Ontology reasoning enhancement
+- Knowledge graph query
+- Mermaid visualization
+- Text description output
 
-使用示例：
-    from knowledge_graph import create_graph_engine
+Usage Example:
+    from kg_engine import create_graph_engine
     
     kg = create_graph_engine()
-    result = kg.semantic_query("老K 使用什么技术？")
+    result = kg.semantic_query("What technologies does Old K use?")
     print(kg.to_mermaid())
 """
-from .core.graph_engine import (
+from .graph_engine import (
     KnowledgeGraphEngine,
     KnowledgeGraph,
     Entity,
     Relation,
     create_graph_engine
 )
-from .core.security import (
+from .security import (
     get_security_manager,
     check_channel_permission,
     sanitize_output,
     PermissionError,
     SecurityManager
 )
-from .core.ontology import (
+from .ontology import (
     OntologyManager,
     OntologyClass,
     OntologyProperty,
@@ -48,21 +48,21 @@ from .core.ontology import (
 )
 
 __all__ = [
-    # 图谱引擎
+    # Graph Engine
     'KnowledgeGraphEngine',
     'KnowledgeGraph',
     'Entity',
     'Relation',
     'create_graph_engine',
     
-    # 安全模块
+    # Security Module
     'get_security_manager',
     'check_channel_permission',
     'sanitize_output',
     'PermissionError',
     'SecurityManager',
     
-    # 本体模块
+    # Ontology Module
     'OntologyManager',
     'OntologyClass',
     'OntologyProperty',
@@ -70,5 +70,5 @@ __all__ = [
     'create_ontology_manager',
 ]
 
-# 版本
-__version__ = '1.1.0'  # 升级到 1.1.0（本体论增强）
+# Version
+__version__ = '2.0.0'  # KG Engine v2.0.0

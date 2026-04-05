@@ -1,14 +1,14 @@
-# Ontology v2.0 - Knowledge Graph
+# KG Engine v2.0 - Knowledge Graph Engine
 
 > Entity Recognition, Relation Extraction, Graph Query and Visualization
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![PyPI](https://img.shields.io/badge/PyPI-v2.0.0-green.svg)](https://pypi.org/project/copaw-ontology/)
+[![PyPI](https://img.shields.io/badge/PyPI-v2.0.0-green.svg)](https://pypi.org/project/kg-engine/)
 
 ## Overview
 
-Ontology v2.0 is an advanced knowledge graph system with entity recognition, relation extraction, graph query, and visualization capabilities.
+KG Engine v2.0 is an advanced knowledge graph engine with entity recognition, relation extraction, graph query, and visualization capabilities.
 
 ### Core Features
 
@@ -23,7 +23,7 @@ Ontology v2.0 is an advanced knowledge graph system with entity recognition, rel
 ### Architecture
 
 ```
-Ontology v2.0
+KG Engine v2.0
 ├── Contracts       # Skill contracts with YAML format
 ├── Core
 │   ├── Bus        # Event-driven communication
@@ -38,7 +38,7 @@ Ontology v2.0
 ## Installation
 
 ```bash
-pip install copaw-ontology
+pip install kg-engine
 ```
 
 ## Quick Start
@@ -46,19 +46,19 @@ pip install copaw-ontology
 ### 1. Build Index
 
 ```bash
-knowledge-graph build_index
+kg-engine build_index
 ```
 
 ### 2. Query Ontology
 
 ```bash
-knowledge-graph ontology_cli --help
+kg-engine ontology_cli --help
 ```
 
 ### 3. Visualize Graph
 
 ```bash
-knowledge-graph visualize_graph --output graph.html
+kg-engine visualize_graph --output graph.html
 ```
 
 ## Documentation
@@ -82,6 +82,6 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Links
 
-- GitHub: https://github.com/lcq225/copaw-ontology
-- PyPI: https://pypi.org/project/copaw-ontology/
-- Issues: https://github.com/lcq225/copaw-ontology/issues
+- GitHub: https://github.com/lcq225/knowledge-graph
+- PyPI: https://pypi.org/project/kg-engine/
+- Issues: https://github.com/lcq225/knowledge-graph/issues

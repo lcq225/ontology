@@ -3,19 +3,20 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "copaw-ontology"
+name = "kg-engine"
 version = "2.0.0"
-description = "Ontology v2.0 - Advanced knowledge graph system with entity recognition, relation extraction, graph query and visualization"
+description = "Knowledge Graph Engine - Entity Recognition, Relation Extraction, Graph Query and Visualization"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "CoPaw Contributors"},
+    {name = "CoPaw", email = "noreply@users.noreply.github.com"}
 ]
-keywords = ["ontology", "knowledge-graph", "entity-recognition", "relation-extraction", "graph-query"]
+keywords = ["knowledge-graph", "entity-recognition", "relation-extraction", "graph-query", "ontology", "kg-engine"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -23,10 +24,25 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 
+dependencies = [
+    "sqlalchemy>=2.0.0",
+    "networkx>=3.0",
+    "pyyaml>=6.0",
+    "numpy>=1.20.0",
+]
+
 [project.urls]
-Homepage = "https://github.com/lcq225/ontology"
-Repository = "https://github.com/lcq225/ontology"
-Issues = "https://github.com/lcq225/ontology/issues"
+Homepage = "https://github.com/lcq225/knowledge-graph"
+Documentation = "https://github.com/lcq225/knowledge-graph/blob/master/README.md"
+Repository = "https://github.com/lcq225/knowledge-graph"
+Issues = "https://github.com/lcq225/knowledge-graph/issues"
 
 [project.scripts]
-knowledge-graph = "knowledge_graph:main"
+kg-engine = "kg_engine.run:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kg_engine*"]
+
+[tool.setuptools.package-data]
+kg_engine = ["*.yaml", "*.yml", "schema/*.json", "templates/*.md"]
